@@ -30,6 +30,8 @@ The model-based policy scored **+217 points (about 2.9x the baseline)** and beat
 Multi-step lookahead with Q-learning or Monte Carlo tree search, to plan squad upgrades across several gameweeks.
 
 ## Tech Stack
-Python, pandas, NumPy, scikit-learn (Random Forest, Gradient Boosting, Linear Regression), MLP reward model
+Python, pandas, NumPy, scikit-learn (Random Forest, Gradient Boosting, Linear Regression, MLPRegressor), Jupyter
 
-> Source code (`policy.py` with the `StudentPolicy` class) will be added.
+## Repository Contents
+- `policy.py`: the `StudentPolicy` class, with `fit` (feature engineering and reward-model training), `reset`, and `act` (constraint-aware greedy transfer, lineup, and captain selection)
+- `notebooks/reward_model_selection.ipynb`: comparison of the Linear Regression, Random Forest, and Gradient Boosting reward models
